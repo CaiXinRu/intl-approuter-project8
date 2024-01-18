@@ -1,5 +1,5 @@
 {
-  "title": "About Us",
-  "description": "This is the about page",
-  "back": "back to the homepage"
+  "about_title": "About Us",
+  "about_description": "This is the about page",
+  "about_back": "back to the homepage"
 }

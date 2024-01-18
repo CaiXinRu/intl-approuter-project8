@@ -1,5 +1,4 @@
 import { Link } from "../../../lib/navigation";
-import { Locale } from "@/i18n.config";
 import { getTranslations } from "next-intl/server";
 import LocaleSwitcher from "./locale-switcher";
 
@@ -16,12 +15,6 @@ export default async function Header() {
           <li>
             <Link href="/about">{t("about")}</Link>
           </li>
-          {/* <li>
-            <Link href="/press">{t("press")}</Link>
-          </li>
-          <li>
-            <Link href="/signin">{t("login")}</Link>
-          </li> */}
         </ul>
         <LocaleSwitcher />
       </nav>
