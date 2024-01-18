@@ -1,9 +1,9 @@
-import createIntlMiddleware from 'next-intl/middleware';
-import {NextRequest, NextResponse} from 'next/server';
-import {i18n} from '../i18n.config'
+import createIntlMiddleware from "next-intl/middleware";
+import { NextRequest } from "next/server";
+import { i18n } from "../i18n.config";
 import { match as matchLocale } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
- 
+
 function getLocale(request: NextRequest): string | undefined {
   const negotiatorHeaders: Record<string, string> = {};
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
@@ -16,24 +16,21 @@ function getLocale(request: NextRequest): string | undefined {
   return locale;
 }
 export default async function middleware(request: NextRequest) {
-  // Step 1: Use the incoming request (example)
   const locale = getLocale(request);
-  const defaultLocale =  locale  === 'zh' ? 'zh' : 'en'
-  // Step 2: Create and call the next-intl middleware (example)
+  console.log(locale);
+  const defaultLocale = locale === "zh" ? "zh" : "en";
   const handleI18nRouting = createIntlMiddleware({
     locales: i18n.locales,
-    defaultLocale: defaultLocale
+    defaultLocale: defaultLocale,
+    localePrefix: "always",
+    localeDetection: false,
   });
   const response = handleI18nRouting(request);
- 
-  // Step 3: Alter the response (example)
-  response.headers.set('x-your-custom-locale', defaultLocale);
- 
-   return response;
-  
+  return response;
 }
- 
+
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(zh|en)/:path*']
+  // matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  matcher: ["/", "/(zh|en)/:path*"],
 };
