@@ -1,9 +1,4 @@
 {
   "home": "Home",
-  "about": "About",
-  "press": "Press",
-  "news": "News",
-  "login": "Log In",
-  "signin": "Sign In",
-  "signup": "Sign Out"
+  "about": "About"
 }
