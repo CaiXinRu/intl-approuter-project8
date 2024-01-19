@@ -1,0 +1,36 @@
+.breadCrumbs-noLink {
+  position: relative;
+  color: rgb(82, 82, 82);
+  padding: 0 12px 0 0;
+  margin: 0 5px 0 0;
+  text-decoration: none;
+}
+
+.breadCrumbs-noLink::after {
+  content: ">";
+  position: absolute;
+  left: 120%;
+  color: #000000;
+}
+
+.breadCrumbs {
+  position: relative;
+  color: #000000;
+  padding: 0 12px 0 0;
+  margin: 0 5px 0 0;
+  text-decoration: none;
+}
+
+.breadCrumbs::after {
+  content: ">";
+  position: absolute;
+  left: 120%;
+  color: #000000;
+}
+
+.breadCrumbs-current {
+  color: #c52a2a;
+  padding: 0 12px 0 0;
+  margin: 0 5px 0 0;
+  text-decoration: none;
+}
