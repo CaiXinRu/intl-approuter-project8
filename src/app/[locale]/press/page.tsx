@@ -1,4 +1,4 @@
-import { Link } from "../../../../lib/navigation";
+import { Link } from "../../../lib/navigation";
 import { useTranslations } from "next-intl";
 
 export default function press() {
