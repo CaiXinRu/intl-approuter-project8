@@ -18,7 +18,7 @@ export default async function Header() {
           <li className="dropdown">
             <div className="dropbtn">{t("about")}</div>
             <div className="dropdown-content">
-              <Link href="/about/ourstory">{t("ourstory")}</Link>
+              <Link href="/about/our-story">{t("ourstory")}</Link>
               <Link href="/about/press">{t("press")}</Link>
             </div>
           </li>

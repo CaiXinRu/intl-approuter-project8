@@ -18,6 +18,8 @@ const TAB_ARRAY = [
   { gid: "0", fileName: "about.json" },
   { gid: "1843368633", fileName: "home.json" },
   { gid: "1299602173", fileName: "navigation.json" },
+  { gid: "533824863", fileName: "our-story.json" },
+  { gid: "540474866", fileName: "press.json" },
 ];
 
 async function fetchCsvFromUrl(url) {

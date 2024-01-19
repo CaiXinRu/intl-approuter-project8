@@ -1,4 +1,5 @@
 {
   "home_title": "Welcome to NextJs i18n",
-  "home_description": "Internationalization in NextJs 13 App router"
+  "home_description": "Internationalization in NextJs 13 App router",
+  "home_message": "Hello, {name}!"
 }

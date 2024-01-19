@@ -1,0 +1,4 @@
+{
+  "ourstory_title": "Our Story",
+  "ourstory_note": "We have {number, plural, =0 {no followers yet} =1 {one follower} other {# followers}}."
+}

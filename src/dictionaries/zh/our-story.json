@@ -1,0 +1,4 @@
+{
+  "ourstory_title": "關於我們",
+  "ourstory_note": "我們{number, plural, =0 {沒有} other {有#位}}粉絲。"
+}

@@ -1,4 +1,5 @@
 {
   "home_title": "歡迎來到尼克斯傑椰斯",
-  "home_description": "邁向下一個框架套件13之路"
+  "home_description": "邁向下一個框架套件13之路",
+  "home_message": "嗨囉, {name}!"
 }
