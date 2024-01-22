@@ -8,6 +8,7 @@ export default getRequestConfig(async ({ locale }) => {
     ...(await import(`../dictionaries/${locale}/our-story.json`)).default,
     ...(await import(`../dictionaries/${locale}/press.json`)).default,
     ...(await import(`../dictionaries/${locale}/case-studies.json`)).default,
+    ...(await import(`../dictionaries/${locale}/contact-us.json`)).default,
   };
   return {
     messages,

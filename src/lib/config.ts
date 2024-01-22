@@ -10,6 +10,7 @@ export const pathnames = {
   "/case-content1": "/case-content1",
   "/case-content2": "/case-content2",
   "/case-content3": "/case-content3",
+  "/contact-us": "/contact-us",
 } satisfies Pathnames<typeof locales>;
 
 // Use the default: `always`
