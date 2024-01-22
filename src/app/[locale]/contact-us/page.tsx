@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import BreadCrumbs from "@src/app/[locale]/components/bread-crumbs";
+import { GoogleMapsEmbed } from "@next/third-parties/google";
 
 const DynamicMap = dynamic(() => import("@src/app/[locale]/components/map"), {
   ssr: false,
@@ -21,6 +22,14 @@ export default function ourstory() {
         <br />
         <h1 className="text-2xl font-bold">{t("map_title")}</h1>
         <DynamicMap />
+        <br />
+        <GoogleMapsEmbed
+          apiKey="XYZ"
+          height={200}
+          width="100%"
+          mode="place"
+          q="Brooklyn+Bridge,New+York,NY"
+        />
       </section>
     </>
   );
