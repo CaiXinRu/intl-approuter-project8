@@ -27,6 +27,11 @@ export default async function Header() {
               <Link href="/case-studies">{t("case-studies")}</Link>
             </div>
           </li>
+          <li className="dropdown">
+            <div className="dropbtn">
+              <Link href="/contact-us">{t("contact-us")}</Link>
+            </div>
+          </li>
         </ul>
         <LocaleSwitcher />
       </nav>
