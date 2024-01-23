@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import BreadCrumbs from "@src/app/[locale]/components/bread-crumbs";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
+import Form from "../components/form";
 
 const DynamicMap = dynamic(() => import("@src/app/[locale]/components/map"), {
   ssr: false,
@@ -18,6 +19,8 @@ export default function ourstory() {
       <section className="py-24">
         <div className="container">
           <h1 className="text-3xl font-bold">{t("contact-us")}</h1>
+          <br />
+          <Form />
         </div>
         <br />
         <h1 className="text-2xl font-bold">{t("map_title")}</h1>

@@ -1,4 +1,13 @@
 {
   "map_title": "地圖",
-  "main_location": "407 台中市西屯區市政路402號7樓"
+  "main_location": "407 台中市西屯區市政路402號7樓",
+  "contact_name": "姓名",
+  "contact_comapny": "公司",
+  "contact_career": "職稱",
+  "contact_website": "公司網站",
+  "contact_country": "國家",
+  "contact_email": "信箱",
+  "contact_requirement": "需求類型",
+  "contact_message": "留言",
+  "contact_input": "請填寫"
 }

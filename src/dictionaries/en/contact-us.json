@@ -1,4 +1,13 @@
 {
   "map_title": "Map",
-  "main_location": "7F, No.402, Shizheng Rd, Xitun Dist.,Taichung City 407.,Taiwan"
+  "main_location": "7F, No.402, Shizheng Rd, Xitun Dist.,Taichung City 407.,Taiwan",
+  "contact_name": "Name",
+  "contact_comapny": "Company",
+  "contact_career": "Job Title",
+  "contact_website": "Company Website",
+  "contact_country": "Country",
+  "contact_email": "Email",
+  "contact_requirement": "Requirement Type",
+  "contact_message": "Message",
+  "contact_input": "Write it down!"
 }

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { locales } from "../../lib/config";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-AppRouter";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -50,9 +51,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang={locale}>
-      <body className={inter.className}>
+      <body className="mx-20">
         <Header />
-        <main className="container">{children}</main>
+        <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
       </body>
     </html>
   );
