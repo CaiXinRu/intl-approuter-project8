@@ -11,7 +11,7 @@ export default function Form() {
   return (
     <>
       <Box sx={{ width: "100vw", maxWidth: "100%", m: 1 }}>
-        <div className="flex flex-col ">
+        <form className="flex flex-col ">
           <FormControl fullWidth sx={{ mb: 2, pr: 1 }}>
             <FormLabel>*{t("contact_name")}</FormLabel>
             <TextField
@@ -105,7 +105,7 @@ export default function Form() {
             ></TextField>
           </FormControl>
           <Button>Submit</Button>
-        </div>
+        </form>
       </Box>
     </>
   );

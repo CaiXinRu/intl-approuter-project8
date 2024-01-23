@@ -10,7 +10,7 @@ export default function map() {
   return (
     <div>
       <MapContainer
-        style={{ height: "80vh", width: "100vw" }}
+        style={{ height: "80vh" }}
         center={[24.1591423, 120.6396484]}
         zoom={13}
         scrollWheelZoom={true}
