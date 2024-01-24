@@ -101,6 +101,27 @@ async function main() {
         );
       });
 
+      let code = `
+      import { getRequestConfig } from "next-intl/server";
+
+      export default getRequestConfig(async ({ locale }) => {
+        const messages = {`;
+
+      for (const item of TAB_ARRAY) {
+        code += `...(await import(\`../dictionaries/\${locale}/${item.fileName}\`)).default,`;
+      }
+
+      code += `
+        };
+        return {
+          messages,
+        };
+      });
+
+      `;
+
+      fs.writeFile("./src/lib/dictionary.ts", code);
+
       console.log("---");
     } catch (err) {
       console.error(err.message);
