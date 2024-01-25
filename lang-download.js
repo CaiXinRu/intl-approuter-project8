@@ -79,9 +79,38 @@ async function writeJsonFile(path, data) {
   }
 }
 
+async function generateDictionaryFile(TAB_ARRAY) {
+  try {
+    let code = `
+    import { getRequestConfig } from "next-intl/server";
+
+    export default getRequestConfig(async ({ locale }) => {
+      const messages = {`;
+
+    for (const item of TAB_ARRAY) {
+      code += `...(await import(\`../dictionaries/\${locale}/${item.fileName}\`)).default,`;
+    }
+
+    code += `
+      };
+      return {
+        messages,
+      };
+    });
+
+    `;
+
+    await fs.writeFile("./src/lib/dictionary.ts", code);
+    console.log("./src/lib/dictionary.ts" + "文件寫入成功");
+  } catch (err) {
+    console.error("./src/lib/dictionary.ts" + "文件寫入失敗");
+    console.error(err.message);
+  }
+}
+
 async function main() {
   const languages = Object.keys(LANG_PATHS);
-
+  await generateDictionaryFile(TAB_ARRAY);
   for (const item of TAB_ARRAY) {
     try {
       const translations = await getLangs(item.gid, languages);
@@ -100,27 +129,6 @@ async function main() {
           translations[lang]
         );
       });
-
-      let code = `
-      import { getRequestConfig } from "next-intl/server";
-
-      export default getRequestConfig(async ({ locale }) => {
-        const messages = {`;
-
-      for (const item of TAB_ARRAY) {
-        code += `...(await import(\`../dictionaries/\${locale}/${item.fileName}\`)).default,`;
-      }
-
-      code += `
-        };
-        return {
-          messages,
-        };
-      });
-
-      `;
-
-      fs.writeFile("./src/lib/dictionary.ts", code);
 
       console.log("---");
     } catch (err) {
